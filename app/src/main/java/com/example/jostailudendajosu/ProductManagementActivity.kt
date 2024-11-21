@@ -3,7 +3,6 @@ package com.example.jostailudendajosu
 import android.content.ContentValues
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import android.widget.ArrayAdapter
 import android.widget.Button
 import android.widget.CheckBox
@@ -11,10 +10,8 @@ import android.widget.EditText
 import android.widget.RadioButton
 import android.widget.Spinner
 import android.widget.Toast
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
+
 
 class ProductManagementActivity : AppCompatActivity() {
     lateinit var gorde: Button
@@ -99,8 +96,8 @@ class ProductManagementActivity : AppCompatActivity() {
             nuevoCodigo = cursor.getInt(0) + 1
         }
         cursor.close()
-        Log.d("ProductDetailActivity", "mota ID: $mota")
-        Log.d("ProductDetailActivity", "jatorri ID: $jatorria")
+        //Log.d("ProductDetailActivity", "mota ID: $mota")
+        //Log.d("ProductDetailActivity", "jatorri ID: $jatorria")
         //Baloreak Sartzeko
         val values = ContentValues().apply {
             put("codigo", nuevoCodigo)
